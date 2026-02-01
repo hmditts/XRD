@@ -6,3 +6,4 @@ trojan://humanity@172.64.155.209:443?security=tls&sni=www.gossipglove.com&type=w
 trojan://humanity@172.64.152.23:443?security=tls&sni=www.gossipglove.com&type=ws&host=www.gossipglove.com&path=%2Fassignment#%40meliproxyy
 trojan://humanity@172.64.155.209:443?security=tls&sni=www.gossipglove.com&type=ws&host=www.gossipglove.com&path=%2Fassignment#MCI-%40V2rayAlpha--4
 trojan://humanity@172.64.152.23:443?security=tls&sni=www.calmlunch.com&type=ws&host=www.calmlunch.com&path=%2Fassignment#%3E%3E%40outline_vpn%3A%3AFR
+trojan://humanity@172.64.155.209:443?security=tls&sni=www.gossipglove.com&type=ws&host=www.gossipglove.com&path=%2Fassignment#v2go%20%7C%20TROJAN%20%7C%20304%20%7C%20%E2%9A%A1%2011ms
