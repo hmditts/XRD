@@ -19,3 +19,27 @@ Fragment
 https://hoji15494.hojivpn.workers.dev/sub/fragment/1H4X*MA%3AGSzLa!z.?app=xray#%F0%9F%92%A6%20BPB%20Fragment
 
 https://hoji15494.hojivpn.workers.dev/sub/fragment/1H4X*MA%3AGSzLa!z.?app=sing-box#%F0%9F%92%A6%20BPB%20Fragment
+
+---------------------
+Green Ping Edge
+vless://3a09338e-f49a-4386-87ad-e4290a648350@188.164.248.67:8443?encryption=none&security=tls&sni=hjjat.pages.dev&fp=chrome&insecure=0&allowInsecure=0&type=ws&host=hjjat.pages.dev&path=%2F#CF%E5%AE%98%E6%96%B9%E4%BC%98%E9%80%8920
+vless://3a09338e-f49a-4386-87ad-e4290a648350@188.164.248.46:443?encryption=none&security=tls&sni=hjjat.pages.dev&fp=chrome&insecure=0&allowInsecure=0&type=ws&host=hjjat.pages.dev&path=%2F#CF%E5%AE%98%E6%96%B9%E4%BC%98%E9%80%891
+vless://3a09338e-f49a-4386-87ad-e4290a648350@188.164.248.85:2083?encryption=none&security=tls&sni=hjjat.pages.dev&fp=chrome&insecure=0&allowInsecure=0&type=ws&host=hjjat.pages.dev&path=%2Fproxyip%3D188.164.248.46%2C188.164.248.47%2C188.164.248.48%2C188.164.248.49%2C188.164.248.50%2C188.164.248.51%2C188.164.248.52%2C188.164.248.53%2C188.164.248.54%2C188.164.248.55%2C188.164.248.56%2C188.164.248.57%2C188.164.248.58%2C188.164.248.59%2C188.164.248.60#CF%E5%AE%98%E6%96%B9%E4%BC%98%E9%80%8914
+vless://3a09338e-f49a-4386-87ad-e4290a648350@188.164.248.52:443?encryption=none&security=tls&sni=hjjat.pages.dev&fp=chrome&insecure=0&allowInsecure=0&type=ws&host=hjjat.pages.dev&path=%2F#188.164.248.52
+vless://3a09338e-f49a-4386-87ad-e4290a648350@188.164.248.51:443?encryption=none&security=tls&sni=hjjat.pages.dev&fp=chrome&insecure=0&allowInsecure=0&type=ws&host=hjjat.pages.dev&path=%2F#188.164.248.51
+vless://3a09338e-f49a-4386-87ad-e4290a648350@188.164.248.67:443?encryption=none&security=tls&sni=hjjat.pages.dev&fp=chrome&insecure=0&allowInsecure=0&type=ws&host=hjjat.pages.dev&path=%2F#188.164.248.67
+vless://3a09338e-f49a-4386-87ad-e4290a648350@188.164.248.62:443?encryption=none&security=tls&sni=hjjat.pages.dev&fp=chrome&insecure=0&allowInsecure=0&type=ws&host=hjjat.pages.dev&path=%2F#188.164.248.62
+vless://3a09338e-f49a-4386-87ad-e4290a648350@188.164.248.68:443?encryption=none&security=tls&sni=hjjat.pages.dev&fp=chrome&insecure=0&allowInsecure=0&type=ws&host=hjjat.pages.dev&path=%2F#188.164.248.68
+vless://3a09338e-f49a-4386-87ad-e4290a648350@188.164.248.58:443?encryption=none&security=tls&sni=hjjat.pages.dev&fp=chrome&insecure=0&allowInsecure=0&type=ws&host=hjjat.pages.dev&path=%2F#188.164.248.58
+vless://3a09338e-f49a-4386-87ad-e4290a648350@188.164.248.53:443?encryption=none&security=tls&sni=hjjat.pages.dev&fp=chrome&insecure=0&allowInsecure=0&type=ws&host=hjjat.pages.dev&path=%2F#188.164.248.53
+vless://3a09338e-f49a-4386-87ad-e4290a648350@188.164.248.61:443?encryption=none&security=tls&sni=hjjat.pages.dev&fp=chrome&insecure=0&allowInsecure=0&type=ws&host=hjjat.pages.dev&path=%2F#188.164.248.61
+vless://3a09338e-f49a-4386-87ad-e4290a648350@188.164.248.57:443?encryption=none&security=tls&sni=hjjat.pages.dev&fp=chrome&insecure=0&allowInsecure=0&type=ws&host=hjjat.pages.dev&path=%2F#188.164.248.57
+vless://3a09338e-f49a-4386-87ad-e4290a648350@188.164.248.65:443?encryption=none&security=tls&sni=hjjat.pages.dev&fp=chrome&insecure=0&allowInsecure=0&type=ws&host=hjjat.pages.dev&path=%2F#188.164.248.65
+vless://3a09338e-f49a-4386-87ad-e4290a648350@188.164.248.55:443?encryption=none&security=tls&sni=hjjat.pages.dev&fp=chrome&insecure=0&allowInsecure=0&type=ws&host=hjjat.pages.dev&path=%2F#188.164.248.55
+vless://3a09338e-f49a-4386-87ad-e4290a648350@188.164.248.54:443?encryption=none&security=tls&sni=hjjat.pages.dev&fp=chrome&insecure=0&allowInsecure=0&type=ws&host=hjjat.pages.dev&path=%2F#188.164.248.54
+vless://3a09338e-f49a-4386-87ad-e4290a648350@188.164.248.66:443?encryption=none&security=tls&sni=hjjat.pages.dev&fp=chrome&insecure=0&allowInsecure=0&type=ws&host=hjjat.pages.dev&path=%2F#188.164.248.66
+vless://3a09338e-f49a-4386-87ad-e4290a648350@188.164.248.64:443?encryption=none&security=tls&sni=hjjat.pages.dev&fp=chrome&insecure=0&allowInsecure=0&type=ws&host=hjjat.pages.dev&path=%2F#188.164.248.64
+vless://3a09338e-f49a-4386-87ad-e4290a648350@188.164.248.59:443?encryption=none&security=tls&sni=hjjat.pages.dev&fp=chrome&insecure=0&allowInsecure=0&type=ws&host=hjjat.pages.dev&path=%2F#188.164.248.59
+vless://3a09338e-f49a-4386-87ad-e4290a648350@188.164.248.70:443?encryption=none&security=tls&sni=hjjat.pages.dev&fp=chrome&insecure=0&allowInsecure=0&type=ws&host=hjjat.pages.dev&path=%2F#188.164.248.70
+vless://3a09338e-f49a-4386-87ad-e4290a648350@188.164.248.69:443?encryption=none&security=tls&sni=hjjat.pages.dev&fp=chrome&insecure=0&allowInsecure=0&type=ws&host=hjjat.pages.dev&path=%2F#188.164.248.69
+vless://3a09338e-f49a-4386-87ad-e4290a648350@188.164.248.56:443?encryption=none&security=tls&sni=hjjat.pages.dev&fp=chrome&insecure=0&allowInsecure=0&type=ws&host=hjjat.pages.dev&path=%2F#188.164.248.56
