@@ -1,0 +1,933 @@
+{
+  "dns": {
+    "hosts": {
+      "domain:googleapis.cn": "googleapis.com",
+      "dns.alidns.com": [
+        "223.5.5.5",
+        "223.6.6.6",
+        "2400:3200::1",
+        "2400:3200:baba::1"
+      ],
+      "one.one.one.one": [
+        "1.1.1.1",
+        "1.0.0.1",
+        "2606:4700:4700::1111",
+        "2606:4700:4700::1001"
+      ],
+      "dns.cloudflare.com": [
+        "104.16.132.229",
+        "104.16.133.229",
+        "2606:4700::6810:84e5",
+        "2606:4700::6810:85e5"
+      ],
+      "cloudflare-dns.com": [
+        "104.16.248.249",
+        "104.16.249.249",
+        "2606:4700::6810:f8f9",
+        "2606:4700::6810:f9f9"
+      ],
+      "dot.pub": [
+        "1.12.12.12",
+        "120.53.53.53"
+      ],
+      "dns.google": [
+        "8.8.8.8",
+        "8.8.4.4",
+        "2001:4860:4860::8888",
+        "2001:4860:4860::8844"
+      ],
+      "dns.quad9.net": [
+        "9.9.9.9",
+        "149.112.112.112",
+        "2620:fe::fe",
+        "2620:fe::9"
+      ],
+      "common.dot.dns.yandex.net": [
+        "77.88.8.8",
+        "77.88.8.1",
+        "2a02:6b8::feed:0ff",
+        "2a02:6b8:0:1::feed:0ff"
+      ]
+    },
+    "servers": [
+      {
+        "address": "fakedns",
+        "domains": [
+          "geosite:cn",
+          "geosite:ir"
+        ]
+      },
+      "1.1.1.1",
+      {
+        "address": "223.5.5.5",
+        "domains": [
+          "geosite:ir"
+        ],
+        "skipFallback": true,
+        "tag": "domestic-dns0"
+      }
+    ],
+    "tag": "dns-module"
+  },
+  "fakedns": [
+    {
+      "ipPool": "198.18.0.0/15",
+      "poolSize": 10000
+    }
+  ],
+  "inbounds": [
+    {
+      "listen": "127.0.0.1",
+      "port": 10808,
+      "protocol": "socks",
+      "settings": {
+        "auth": "noauth",
+        "udp": true,
+        "userLevel": 8
+      },
+      "sniffing": {
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "enabled": true,
+        "routeOnly": false
+      },
+      "tag": "socks"
+    }
+  ],
+  "log": {
+    "loglevel": "warning"
+  },
+  "observatory": {
+    "enableConcurrency": true,
+    "probeInterval": "60m",
+    "probeUrl": "https://www.gstatic.com/generate_204",
+    "subjectSelector": [
+      "proxy-proxy-"
+    ]
+  },
+  "outbounds": [
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.16.73.8",
+            "port": 2053,
+            "users": [
+              {
+                "encryption": "none",
+                "flow": "",
+                "id": "21aa31e5-8aa7-4583-a023-75b80093a890",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": false,
+          "alpn": [
+            "http/1.1"
+          ],
+          "fingerprint": "firefox",
+          "serverName": "KoUSHa.hOJivpn.WOrKErS.DEV",
+          "show": false
+        },
+        "wsSettings": {
+          "host": "kousha.hojivpn.workers.dev",
+          "path": "/eyJqdW5rIjoiRW8xZnppTUsiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyI5MS4xMDcuMTQ4LjE1NCIsIjkxLjEwNy4yNTUuMTk2IiwiOTEuMTA3LjE3MS4yNTEiLCI5MS4xMDcuMTU4Ljc3IiwiOTEuMTA3LjE1NS4xMyIsIjkxLjEwNy4yNTEuMTEzIl19?ed=2560"
+        }
+      },
+      "tag": "proxy-proxy-1-104.16.73.8"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.16.73.128",
+            "port": 2053,
+            "users": [
+              {
+                "encryption": "none",
+                "flow": "",
+                "id": "21aa31e5-8aa7-4583-a023-75b80093a890",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": false,
+          "alpn": [
+            "http/1.1"
+          ],
+          "fingerprint": "firefox",
+          "serverName": "KousHA.HojiVpN.WORkeRs.dEv",
+          "show": false
+        },
+        "wsSettings": {
+          "host": "kousha.hojivpn.workers.dev",
+          "path": "/eyJqdW5rIjoiMzEwM2VLNmY1MWlJdkgiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyI5MS4xMDcuMTQ4LjE1NCIsIjkxLjEwNy4yNTUuMTk2IiwiOTEuMTA3LjE3MS4yNTEiLCI5MS4xMDcuMTU4Ljc3IiwiOTEuMTA3LjE1NS4xMyIsIjkxLjEwNy4yNTEuMTEzIl19?ed=2560"
+        }
+      },
+      "tag": "proxy-proxy-2-104.16.73.128"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.16.73.106",
+            "port": 2053,
+            "users": [
+              {
+                "encryption": "none",
+                "flow": "",
+                "id": "21aa31e5-8aa7-4583-a023-75b80093a890",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": false,
+          "alpn": [
+            "http/1.1"
+          ],
+          "fingerprint": "firefox",
+          "serverName": "kOuShA.HoJIvpn.WoRkERS.DEv",
+          "show": false
+        },
+        "wsSettings": {
+          "host": "kousha.hojivpn.workers.dev",
+          "path": "/eyJqdW5rIjoiQk9KUjJFdlhSVVZ5NWVrUiIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbIjkxLjEwNy4xNDguMTU0IiwiOTEuMTA3LjI1NS4xOTYiLCI5MS4xMDcuMTcxLjI1MSIsIjkxLjEwNy4xNTguNzciLCI5MS4xMDcuMTU1LjEzIiwiOTEuMTA3LjI1MS4xMTMiXX0=?ed=2560"
+        }
+      },
+      "tag": "proxy-proxy-3-104.16.73.106"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.16.73.93",
+            "port": 2053,
+            "users": [
+              {
+                "encryption": "none",
+                "flow": "",
+                "id": "21aa31e5-8aa7-4583-a023-75b80093a890",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": false,
+          "alpn": [
+            "http/1.1"
+          ],
+          "fingerprint": "firefox",
+          "serverName": "KOuSHa.HojiVpn.wORkERs.dEV",
+          "show": false
+        },
+        "wsSettings": {
+          "host": "kousha.hojivpn.workers.dev",
+          "path": "/eyJqdW5rIjoiM0ZKWERQZENVaXh5Ymk3IiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiOTEuMTA3LjE0OC4xNTQiLCI5MS4xMDcuMjU1LjE5NiIsIjkxLjEwNy4xNzEuMjUxIiwiOTEuMTA3LjE1OC43NyIsIjkxLjEwNy4xNTUuMTMiLCI5MS4xMDcuMjUxLjExMyJdfQ==?ed=2560"
+        }
+      },
+      "tag": "proxy-proxy-4-104.16.73.93"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.16.73.105",
+            "port": 2053,
+            "users": [
+              {
+                "encryption": "none",
+                "flow": "",
+                "id": "21aa31e5-8aa7-4583-a023-75b80093a890",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": false,
+          "alpn": [
+            "http/1.1"
+          ],
+          "fingerprint": "firefox",
+          "serverName": "kOUSHA.HOJivPN.WoRkerS.dEV",
+          "show": false
+        },
+        "wsSettings": {
+          "host": "kousha.hojivpn.workers.dev",
+          "path": "/eyJqdW5rIjoiUlJVMEJjS3pmSyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbIjkxLjEwNy4xNDguMTU0IiwiOTEuMTA3LjI1NS4xOTYiLCI5MS4xMDcuMTcxLjI1MSIsIjkxLjEwNy4xNTguNzciLCI5MS4xMDcuMTU1LjEzIiwiOTEuMTA3LjI1MS4xMTMiXX0=?ed=2560"
+        }
+      },
+      "tag": "proxy-proxy-5-104.16.73.105"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.16.73.6",
+            "port": 2053,
+            "users": [
+              {
+                "encryption": "none",
+                "flow": "",
+                "id": "21aa31e5-8aa7-4583-a023-75b80093a890",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": false,
+          "alpn": [
+            "http/1.1"
+          ],
+          "fingerprint": "firefox",
+          "serverName": "koUShA.hOjIVpN.woRKERs.Dev",
+          "show": false
+        },
+        "wsSettings": {
+          "host": "kousha.hojivpn.workers.dev",
+          "path": "/eyJqdW5rIjoiZVNoRGl4UG5pWUJJZWYiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyI5MS4xMDcuMTQ4LjE1NCIsIjkxLjEwNy4yNTUuMTk2IiwiOTEuMTA3LjE3MS4yNTEiLCI5MS4xMDcuMTU4Ljc3IiwiOTEuMTA3LjE1NS4xMyIsIjkxLjEwNy4yNTEuMTEzIl19?ed=2560"
+        }
+      },
+      "tag": "proxy-proxy-6-104.16.73.6"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.16.73.175",
+            "port": 2053,
+            "users": [
+              {
+                "encryption": "none",
+                "flow": "",
+                "id": "21aa31e5-8aa7-4583-a023-75b80093a890",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": false,
+          "alpn": [
+            "http/1.1"
+          ],
+          "fingerprint": "firefox",
+          "serverName": "kouSha.HojiVPN.wORKERs.deV",
+          "show": false
+        },
+        "wsSettings": {
+          "host": "kousha.hojivpn.workers.dev",
+          "path": "/eyJqdW5rIjoiMGhCM3VyT2hFIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiOTEuMTA3LjE0OC4xNTQiLCI5MS4xMDcuMjU1LjE5NiIsIjkxLjEwNy4xNzEuMjUxIiwiOTEuMTA3LjE1OC43NyIsIjkxLjEwNy4xNTUuMTMiLCI5MS4xMDcuMjUxLjExMyJdfQ==?ed=2560"
+        }
+      },
+      "tag": "proxy-proxy-7-104.16.73.175"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.16.73.182",
+            "port": 2053,
+            "users": [
+              {
+                "encryption": "none",
+                "flow": "",
+                "id": "21aa31e5-8aa7-4583-a023-75b80093a890",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": false,
+          "alpn": [
+            "http/1.1"
+          ],
+          "fingerprint": "firefox",
+          "serverName": "koUShA.HojIvPN.WOrKers.dEV",
+          "show": false
+        },
+        "wsSettings": {
+          "host": "kousha.hojivpn.workers.dev",
+          "path": "/eyJqdW5rIjoiRVc3S3AzenQiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyI5MS4xMDcuMTQ4LjE1NCIsIjkxLjEwNy4yNTUuMTk2IiwiOTEuMTA3LjE3MS4yNTEiLCI5MS4xMDcuMTU4Ljc3IiwiOTEuMTA3LjE1NS4xMyIsIjkxLjEwNy4yNTEuMTEzIl19?ed=2560"
+        }
+      },
+      "tag": "proxy-proxy-8-104.16.73.182"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.16.73.152",
+            "port": 2053,
+            "users": [
+              {
+                "encryption": "none",
+                "flow": "",
+                "id": "21aa31e5-8aa7-4583-a023-75b80093a890",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": false,
+          "alpn": [
+            "http/1.1"
+          ],
+          "fingerprint": "firefox",
+          "serverName": "koUSHa.hOJIVPn.wORKeRs.deV",
+          "show": false
+        },
+        "wsSettings": {
+          "host": "kousha.hojivpn.workers.dev",
+          "path": "/eyJqdW5rIjoiM1Y4MkhjSjRJMFF2cHQiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyI5MS4xMDcuMTQ4LjE1NCIsIjkxLjEwNy4yNTUuMTk2IiwiOTEuMTA3LjE3MS4yNTEiLCI5MS4xMDcuMTU4Ljc3IiwiOTEuMTA3LjE1NS4xMyIsIjkxLjEwNy4yNTEuMTEzIl19?ed=2560"
+        }
+      },
+      "tag": "proxy-proxy-9-104.16.73.152"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.16.73.211",
+            "port": 2053,
+            "users": [
+              {
+                "encryption": "none",
+                "flow": "",
+                "id": "21aa31e5-8aa7-4583-a023-75b80093a890",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": false,
+          "alpn": [
+            "http/1.1"
+          ],
+          "fingerprint": "firefox",
+          "serverName": "koUSha.hOjIvpN.WorkErs.Dev",
+          "show": false
+        },
+        "wsSettings": {
+          "host": "kousha.hojivpn.workers.dev",
+          "path": "/eyJqdW5rIjoiTEMwc0s0b2tacWxITkhPTCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbIjkxLjEwNy4xNDguMTU0IiwiOTEuMTA3LjI1NS4xOTYiLCI5MS4xMDcuMTcxLjI1MSIsIjkxLjEwNy4xNTguNzciLCI5MS4xMDcuMTU1LjEzIiwiOTEuMTA3LjI1MS4xMTMiXX0=?ed=2560"
+        }
+      },
+      "tag": "proxy-proxy-10-104.16.73.211"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.16.73.12",
+            "port": 2053,
+            "users": [
+              {
+                "encryption": "none",
+                "flow": "",
+                "id": "21aa31e5-8aa7-4583-a023-75b80093a890",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": false,
+          "alpn": [
+            "http/1.1"
+          ],
+          "fingerprint": "firefox",
+          "serverName": "KouSHA.HOJiVpn.WorKErs.dev",
+          "show": false
+        },
+        "wsSettings": {
+          "host": "kousha.hojivpn.workers.dev",
+          "path": "/eyJqdW5rIjoiOGd4eUZDQkZqeE01RGIxQSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbIjkxLjEwNy4xNDguMTU0IiwiOTEuMTA3LjI1NS4xOTYiLCI5MS4xMDcuMTcxLjI1MSIsIjkxLjEwNy4xNTguNzciLCI5MS4xMDcuMTU1LjEzIiwiOTEuMTA3LjI1MS4xMTMiXX0=?ed=2560"
+        }
+      },
+      "tag": "proxy-proxy-11-104.16.73.12"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.16.73.51",
+            "port": 2053,
+            "users": [
+              {
+                "encryption": "none",
+                "flow": "",
+                "id": "21aa31e5-8aa7-4583-a023-75b80093a890",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": false,
+          "alpn": [
+            "http/1.1"
+          ],
+          "fingerprint": "firefox",
+          "serverName": "KoUSha.HOjIvpN.wORkeRs.dev",
+          "show": false
+        },
+        "wsSettings": {
+          "host": "kousha.hojivpn.workers.dev",
+          "path": "/eyJqdW5rIjoiU0NaVXNxd0kiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyI5MS4xMDcuMTQ4LjE1NCIsIjkxLjEwNy4yNTUuMTk2IiwiOTEuMTA3LjE3MS4yNTEiLCI5MS4xMDcuMTU4Ljc3IiwiOTEuMTA3LjE1NS4xMyIsIjkxLjEwNy4yNTEuMTEzIl19?ed=2560"
+        }
+      },
+      "tag": "proxy-proxy-12-104.16.73.51"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.16.73.0",
+            "port": 2053,
+            "users": [
+              {
+                "encryption": "none",
+                "flow": "",
+                "id": "21aa31e5-8aa7-4583-a023-75b80093a890",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": false,
+          "alpn": [
+            "http/1.1"
+          ],
+          "fingerprint": "firefox",
+          "serverName": "koUSHa.hojivPN.WOrkerS.Dev",
+          "show": false
+        },
+        "wsSettings": {
+          "host": "kousha.hojivpn.workers.dev",
+          "path": "/eyJqdW5rIjoiazNhVUtDMWJCaSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbIjkxLjEwNy4xNDguMTU0IiwiOTEuMTA3LjI1NS4xOTYiLCI5MS4xMDcuMTcxLjI1MSIsIjkxLjEwNy4xNTguNzciLCI5MS4xMDcuMTU1LjEzIiwiOTEuMTA3LjI1MS4xMTMiXX0=?ed=2560"
+        }
+      },
+      "tag": "proxy-proxy-13-104.16.73.0"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.16.73.58",
+            "port": 2053,
+            "users": [
+              {
+                "encryption": "none",
+                "flow": "",
+                "id": "21aa31e5-8aa7-4583-a023-75b80093a890",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": false,
+          "alpn": [
+            "http/1.1"
+          ],
+          "fingerprint": "firefox",
+          "serverName": "KouShA.HOjivpN.wOrkeRs.dEv",
+          "show": false
+        },
+        "wsSettings": {
+          "host": "kousha.hojivpn.workers.dev",
+          "path": "/eyJqdW5rIjoiemtmb2d2OFNBVnJuYnBTIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiOTEuMTA3LjE0OC4xNTQiLCI5MS4xMDcuMjU1LjE5NiIsIjkxLjEwNy4xNzEuMjUxIiwiOTEuMTA3LjE1OC43NyIsIjkxLjEwNy4xNTUuMTMiLCI5MS4xMDcuMjUxLjExMyJdfQ==?ed=2560"
+        }
+      },
+      "tag": "proxy-proxy-14-104.16.73.58"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.16.73.150",
+            "port": 2053,
+            "users": [
+              {
+                "encryption": "none",
+                "flow": "",
+                "id": "21aa31e5-8aa7-4583-a023-75b80093a890",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": false,
+          "alpn": [
+            "http/1.1"
+          ],
+          "fingerprint": "firefox",
+          "serverName": "kOuSHa.hOJivpn.WoRkerS.DeV",
+          "show": false
+        },
+        "wsSettings": {
+          "host": "kousha.hojivpn.workers.dev",
+          "path": "/eyJqdW5rIjoiT1VCOWREOTNKWHFEUEciLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyI5MS4xMDcuMTQ4LjE1NCIsIjkxLjEwNy4yNTUuMTk2IiwiOTEuMTA3LjE3MS4yNTEiLCI5MS4xMDcuMTU4Ljc3IiwiOTEuMTA3LjE1NS4xMyIsIjkxLjEwNy4yNTEuMTEzIl19?ed=2560"
+        }
+      },
+      "tag": "proxy-proxy-15-104.16.73.150"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.16.73.39",
+            "port": 2053,
+            "users": [
+              {
+                "encryption": "none",
+                "flow": "",
+                "id": "21aa31e5-8aa7-4583-a023-75b80093a890",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": false,
+          "alpn": [
+            "http/1.1"
+          ],
+          "fingerprint": "firefox",
+          "serverName": "KOUShA.HojIVPn.WorkeRS.DeV",
+          "show": false
+        },
+        "wsSettings": {
+          "host": "kousha.hojivpn.workers.dev",
+          "path": "/eyJqdW5rIjoiRGVaQnhjQWNDNCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbIjkxLjEwNy4xNDguMTU0IiwiOTEuMTA3LjI1NS4xOTYiLCI5MS4xMDcuMTcxLjI1MSIsIjkxLjEwNy4xNTguNzciLCI5MS4xMDcuMTU1LjEzIiwiOTEuMTA3LjI1MS4xMTMiXX0=?ed=2560"
+        }
+      },
+      "tag": "proxy-proxy-16-104.16.73.39"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.16.73.112",
+            "port": 2053,
+            "users": [
+              {
+                "encryption": "none",
+                "flow": "",
+                "id": "21aa31e5-8aa7-4583-a023-75b80093a890",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": false,
+          "alpn": [
+            "http/1.1"
+          ],
+          "fingerprint": "firefox",
+          "serverName": "kOusHA.Hojivpn.WorKerS.DEV",
+          "show": false
+        },
+        "wsSettings": {
+          "host": "kousha.hojivpn.workers.dev",
+          "path": "/eyJqdW5rIjoidDluSE1LQUgzenJibllDNyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbIjkxLjEwNy4xNDguMTU0IiwiOTEuMTA3LjI1NS4xOTYiLCI5MS4xMDcuMTcxLjI1MSIsIjkxLjEwNy4xNTguNzciLCI5MS4xMDcuMTU1LjEzIiwiOTEuMTA3LjI1MS4xMTMiXX0=?ed=2560"
+        }
+      },
+      "tag": "proxy-proxy-17-104.16.73.112"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.16.73.13",
+            "port": 2053,
+            "users": [
+              {
+                "encryption": "none",
+                "flow": "",
+                "id": "21aa31e5-8aa7-4583-a023-75b80093a890",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": false,
+          "alpn": [
+            "http/1.1"
+          ],
+          "fingerprint": "firefox",
+          "serverName": "koUsHA.HOjiVpn.wOrkErs.dev",
+          "show": false
+        },
+        "wsSettings": {
+          "host": "kousha.hojivpn.workers.dev",
+          "path": "/eyJqdW5rIjoiNWZRZmQ4QkNyaCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbIjkxLjEwNy4xNDguMTU0IiwiOTEuMTA3LjI1NS4xOTYiLCI5MS4xMDcuMTcxLjI1MSIsIjkxLjEwNy4xNTguNzciLCI5MS4xMDcuMTU1LjEzIiwiOTEuMTA3LjI1MS4xMTMiXX0=?ed=2560"
+        }
+      },
+      "tag": "proxy-proxy-18-104.16.73.13"
+    },
+    {
+      "protocol": "freedom",
+      "streamSettings": {
+        "network": "tcp",
+        "sockopt": {
+          "domainStrategy": "UseIP"
+        }
+      },
+      "tag": "direct"
+    },
+    {
+      "protocol": "blackhole",
+      "settings": {
+        "response": {
+          "type": "http"
+        }
+      },
+      "tag": "block"
+    },
+    {
+      "protocol": "dns",
+      "tag": "dns-out"
+    }
+  ],
+  "remarks": "#2 kousha",
+  "routing": {
+    "balancers": [
+      {
+        "selector": [
+          "proxy-proxy-"
+        ],
+        "strategy": {
+          "type": "leastPing"
+        },
+        "tag": "balancer-main"
+      }
+    ],
+    "domainStrategy": "AsIs",
+    "rules": [
+      {
+        "inboundTag": [
+          "socks"
+        ],
+        "outboundTag": "dns-out",
+        "port": "53",
+        "type": "field"
+      },
+      {
+        "ip": [
+          "geoip:ir"
+        ],
+        "outboundTag": "direct",
+        "type": "field"
+      },
+      {
+        "domain": [
+          "geosite:ir"
+        ],
+        "outboundTag": "direct",
+        "type": "field"
+      },
+      {
+        "inboundTag": [
+          "domestic-dns0"
+        ],
+        "outboundTag": "direct",
+        "type": "field"
+      },
+      {
+        "balancerTag": "balancer-main",
+        "inboundTag": [
+          "dns-module"
+        ],
+        "type": "field"
+      },
+      {
+        "balancerTag": "balancer-main",
+        "network": "tcp,udp",
+        "type": "field"
+      }
+    ]
+  }
+}
